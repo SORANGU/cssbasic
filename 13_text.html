@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    div.box {
+      width: 150px;
+      border: 1px solid black;
+
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    div.box-multiline {
+      width: 300px;
+      border: 1px solid black;
+
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+
+      display: -webkit-box;
+      -webkit-line-clamp: 2;   
+      -webkit-box-orient: vertical 
+
+      /*  */
+    }
+  </style>
+</head>
+<body>
+  <!-- tip : 넘치는 텍스트에 말 줄임표(...) 만들기 -->
+  <h1>text-overflow: 오버풀로우 된 내용을 어떻게 보일지 지정</h1>
+  <h2>ellipsis:생략(...)</h2>
+  <div class="box">이것은 매우 긴 제목입니다.</div>
+
+  <h2>2줄 이상일 때</h2>
+  <div class="box-multiline">이것은 매우 긴 설명입니다.
+    이것은 매우 긴 설명입니다.
+    이것은 매우 긴 설명입니다.
+  </div>
+
+</body>
+</html>
